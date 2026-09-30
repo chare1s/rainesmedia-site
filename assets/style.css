@@ -851,6 +851,190 @@ input:focus { outline: none; }
   letter-spacing: .08em;
 }
 
+.image-placeholder.filled {
+  border-color: transparent;
+  color: transparent;
+  background: #0d0909;
+}
+
+.slot-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.image-placeholder.filled .slot-img { opacity: 1; }
+
+/* ---- projects ---- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.projects-grid.two-up {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(22, 15, 16, .6);
+  transition: border-color .2s ease;
+}
+.project-card:hover { border-color: rgba(235, 94, 40, .4); }
+
+.project-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.play-badge {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f57a45 0%, #eb5e28 60%, #d94e1d 100%);
+  box-shadow: 0 8px 26px -8px rgba(235, 94, 40, .8);
+}
+.play-badge::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 14px;
+  border-left: 13px solid #1a1112;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 26px 28px;
+}
+
+.project-meta {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-mono);
+}
+.project-meta .sep { margin: 0 10px; color: rgba(118, 103, 84, .6); }
+
+.project-body h3 {
+  margin: 14px 0 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.project-role {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.project-body p {
+  margin: 12px 0 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text-68);
+}
+
+.project-actions {
+  display: flex;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 20px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.project-link { color: var(--text-70); }
+.project-link:hover, .project-link.primary { color: var(--accent); }
+
+.project-card.more-card {
+  justify-content: flex-end;
+  min-height: 260px;
+  padding: 30px 28px;
+  border: 1px dashed rgba(239, 236, 227, .18);
+  background: rgba(22, 15, 16, .4);
+}
+.more-card h3 { margin: 14px 0 0; font-size: 22px; font-weight: 600; letter-spacing: -.02em; color: var(--text-75); }
+.more-card p { margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: var(--text-55); }
+
+/* ---- experience ---- */
+
+.exp-list {
+  margin-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: minmax(0, 160px) 1fr;
+  gap: 12px 32px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-period {
+  padding-top: 6px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.exp-main h3 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.exp-role {
+  margin-left: 6px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-62);
+}
+
+.exp-main p {
+  margin: 8px 0 0;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text-68);
+}
+
+@media (max-width: 600px) {
+  .exp-row { grid-template-columns: 1fr; gap: 6px; }
+  .exp-period:empty { display: none; }
+}
+
 /* ---- footer ---- */
 
 .site-footer {

@@ -25,6 +25,7 @@
     </a>
     <nav class="site-nav">
       <a href="/" class="nav-link active">Home</a>
+      <a href="/work" class="nav-link">Work</a>
       <a href="/collage" class="nav-link">Collage</a>
       <a href="/contact" class="nav-link">Contact</a>
       <a href="https://calendly.com/" target="_blank" rel="noopener" class="btn-pill">Book a call</a>
@@ -103,11 +104,19 @@
     </section>
 
     <section class="wrap section">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <a href="/work" class="link-more">All projects &amp; experience →</a>
+      </div>
+      <div class="projects-grid two-up" data-projects="4"></div>
+    </section>
+
+    <section class="wrap section">
       <h2 class="section-title">Recent results</h2>
       <div class="results-grid">
         <article class="result-card">
           <div class="result-media">
-            <div class="image-placeholder">Drop a still from this project</div>
+            <div class="image-placeholder" data-img="case-1.jpg">Drop a still from this project</div>
           </div>
           <div class="result-body">
             <div class="strip-label">Growth from zero</div>
@@ -117,7 +126,7 @@
         </article>
         <article class="result-card">
           <div class="result-media">
-            <div class="image-placeholder">Drop the top-performing video thumbnail</div>
+            <div class="image-placeholder" data-img="case-2.jpg">Drop the top-performing video thumbnail</div>
           </div>
           <div class="result-body">
             <div class="strip-label">Reach</div>
@@ -135,7 +144,7 @@
 
     <section class="wrap section about-grid">
       <div class="about-portrait">
-        <div class="image-placeholder">Drop a portrait of you</div>
+        <div class="image-placeholder" data-img="portrait.jpg" data-alt="Charles Raines">Drop a portrait of you</div>
       </div>
       <div>
         <div class="kicker-plain">About</div>
@@ -157,11 +166,11 @@
         <a href="/collage" class="link-more">Open full collage →</a>
       </div>
       <div class="ig-grid">
-        <div class="ig-cell"><div class="image-placeholder">Post 1</div></div>
-        <div class="ig-cell"><div class="image-placeholder">Post 2</div></div>
-        <div class="ig-cell"><div class="image-placeholder">Post 3</div></div>
-        <div class="ig-cell"><div class="image-placeholder">Post 4</div></div>
-        <div class="ig-cell"><div class="image-placeholder">Post 5</div></div>
+        <div class="ig-cell"><div class="image-placeholder" data-img="post-1.jpg">Post 1</div></div>
+        <div class="ig-cell"><div class="image-placeholder" data-img="post-2.jpg">Post 2</div></div>
+        <div class="ig-cell"><div class="image-placeholder" data-img="post-3.jpg">Post 3</div></div>
+        <div class="ig-cell"><div class="image-placeholder" data-img="post-4.jpg">Post 4</div></div>
+        <div class="ig-cell"><div class="image-placeholder" data-img="post-5.jpg">Post 5</div></div>
       </div>
     </section>
 
@@ -201,6 +210,7 @@
     </div>
   </footer>
 
+  <script src="/assets/content.js"></script>
   <script src="/assets/main.js"></script>
 </body>
 </html>
